@@ -17,7 +17,7 @@ function initMap() {
   directionsService = new google.maps.DirectionsService();
   directionsRenderer = new google.maps.DirectionsRenderer({
     map: map,
-    suppressMarkers: true,
+    // suppressMarkers: true,
     polylineOptions: {
       strokeColor: "#00FF00",
     },
@@ -96,7 +96,7 @@ function calculateRoute(destination) {
   const request = {
     origin: userLocation,
     destination: destination,
-    travelMode: google.maps.TravelMode.DRIVING,
+    travelMode: google.maps.TravelMode.WALKING,
   };
 
   directionsService.route(request, (result, status) => {
